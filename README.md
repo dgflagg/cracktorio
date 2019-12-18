@@ -2,7 +2,8 @@
 factorio tools, etc, all...
 
 
-# run from specific Factorio build version
+# pull & tag for a specific Factorio server version
+docker pull dgflagg/cracktorio:0.17.79
 docker tag dgflagg/cracktorio:0.17.79 cracktorio
 
 # return the server help menu if no command passed as argument to container
@@ -42,3 +43,8 @@ docker start my-factorio-server
 
 # local docker build
 docker build --build-arg factorio_password=thefactorymustgrow -t dgflagg/cracktorio:local .
+
+
+
+#TODO:
+- alpine-based 'slim' image
