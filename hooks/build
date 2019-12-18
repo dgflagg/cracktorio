@@ -1,0 +1,11 @@
+#!/bin/bash
+
+docker build \
+    --build-arg factorio_version="${FACTORIO_VERSION}" \
+    --build-arg factorio_user="${FACTORIO_USER}" \
+    --build-arg factorio_password="${FACTORIO_PASSWORD}" \
+    -t "dgflagg/cracktorio:${FACTORIO_VERSION}" .
+
+docker tag "dgflagg/cracktorio:${FACTORIO_VERSION}" "dgflagg/cracktorio:latest"
+
+docker push "dgflagg/acm:${FACTORIO_VERSION}"

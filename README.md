@@ -3,7 +3,7 @@ factorio tools, etc, all...
 
 
 # local docker build
-docker build --build-arg FACTORIO_PASSWORD=thefactorymustgrow -t dgflagg/cracktorio:local .
+docker build --build-arg factorio_password=thefactorymustgrow -t dgflagg/cracktorio:local .
 
 # return the server help menu if no command passed as argument to container
 docker run --rm dgflagg/cracktorio:local
