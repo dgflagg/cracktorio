@@ -8,4 +8,4 @@ docker build \
 
 docker tag "dgflagg/cracktorio:${FACTORIO_VERSION}" "dgflagg/cracktorio:latest"
 
-docker push "dgflagg/acm:${FACTORIO_VERSION}"
+docker push "dgflagg/cracktorio:${FACTORIO_VERSION}"
