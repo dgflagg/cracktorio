@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cracktorio
+  labels:
+    app: cracktorio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cracktorio
+  template:
+    metadata:
+      labels:
+        app: cracktorio
+    spec:
+      containers:
+      - name: cracktorio
+        image: dgflagg/cracktorio:0.17.79
+        command: ["/bin/sh"]
+        args: ["-c", "./bin/x64/factorio --create saves/my-save.zip; ./bin/x64/factorio --start-server ./saves/my-save.zip"]
+        ports:
+        - containerPort: 34197
+          protocol: UDP
