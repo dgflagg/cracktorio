@@ -45,6 +45,16 @@ docker start my-factorio-server
 docker build --build-arg factorio_password=thefactorymustgrow -t dgflagg/cracktorio:local .
 
 
+# deployment to k8s cluster
+kubectl create -f k8s
+
+# follow logs from pod
+kubectl logs ${POD_NAME} --follow
+
+# start a shell in running container
+kubectl exec -it ${POD_NAME} bash
+
 
 #TODO:
+- cannot connect to k8s-hosted server - not sure why - can try to debug k8s networking issue
 - alpine-based 'slim' image
